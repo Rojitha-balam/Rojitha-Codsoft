@@ -1,0 +1,41 @@
+# Online Python compiler (interpreter) to run Python online.
+# Write Python 3 code in this online editor and run it.
+import time 
+now=time.ctime()
+
+def chatbot(user_input):
+
+    user_input = user_input.lower()
+
+    if "hi" in user_input or "hello" in user_input:
+        return "hi there! I am chatbot here to assist you."
+    elif "what is your name" in user_input:
+        return "I'm just a chatbot, so I don't have a name,but you can call me anything."
+    elif "how are you" in user_input:
+        return "I am Fine, what abou you."
+    elif "where are you from" in user_input:
+        return "I don't have a specific location."
+    elif "what is your favorite food item" in user_input:
+        return "I'm a chatbot,so i don't have personal preferences for food item."
+    
+    elif "do you enjoy listening to music" in user_input:
+        return "I can't listen to music,but i'm here to chat about it!"
+    elif "what is the time now" in user_input:
+        return "I don't have present time updates."
+    elif "what about the climate condition" in user_input:
+        return "sorry! I'don't have real-time climate data."
+    elif"bye" in user_input:
+        return"Bye!Have a nice day and chat with you soon."
+    else:
+        return " I'm sorry,I don't understand that."
+                    
+print("Chatbot: Hi! I'm a simple chatbot, I'm here to assist you!")
+
+while True:
+    user_input = input("Me: ")  
+    if user_input.lower() == 'bye':
+        print("Chatbot: Bye! Have a nice day and i will chat you soon.")
+        break  
+    
+    response = chatbot(user_input)  
+    print("Chatbot:", response)
